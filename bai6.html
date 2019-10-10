@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 30 số đầu tiên chia hết cho 7</title>
+</head>
+<body>
+<script>
+    function countNumberDivSeven() {
+        let number = 1;
+        let count = 0;
+        let sum = 0;
+        while (count < 30) {
+            if (number % 7 === 0) {
+                sum = sum + number;
+                count += 1;
+            }
+            number += 1;
+        }
+        console.log(sum);
+    }
+    countNumberDivSeven();
+</script>
+</body>
+</html>

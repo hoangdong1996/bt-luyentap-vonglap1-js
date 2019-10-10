@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số đầu tiên trong dãy fibonaci chia hết cho 5</title>
+</head>
+<body>
+<p>Số đầu tiên trong dãy fibonaci chia hết cho 5</p>
+<script>
+    function fibonaci(num) {
+        let a = 1;
+        let b = 0;
+        let temp;
+        while (num >= 0) {
+            temp = a  ;
+            a = a + b;
+            b = temp;
+            num--;
+        }
+        return b;
+    }
+    console.log(fibonaci(10));
+    function firstFibonaciDivFive() {
+        let count = 0;
+        let number = 1;
+        while (count < 1) {
+            if (fibonaci(number) % 5 === 0) {
+                document.write(fibonaci(number));
+                count += 1;
+            }
+            number += 1;
+        }
+    }
+    firstFibonaciDivFive()
+</script>
+</body>
+</html>

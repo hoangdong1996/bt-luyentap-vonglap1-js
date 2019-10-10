@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng 20 số đầu tiên trong dãy fibonaci </title>
+</head>
+<body>
+<script>
+    function isFibonaci(num) {
+        let a = 1;
+        let b = 0;
+        let temp;
+        while (num >= 0) {
+            temp = a;
+            a = a + b;
+            b = temp;
+            num--;
+        }
+        return b;
+    }
+
+    function getSumFibonaci() {
+        let count = 0;
+        let sum = 1;
+        while (count < 20) {
+                sum = sum + isFibonaci(count);
+                count = count + 1;
+            }
+            console.log(sum);
+        }
+
+    getSumFibonaci();
+</script>
+</body>
+</html>
